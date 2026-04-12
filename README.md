@@ -1,9 +1,12 @@
-# Copilot Studio ROCKET Skill
+# 🚀 Copilot Studio ROCKET Skill
 
-A Claude Code skill for scoring Microsoft Copilot Studio agent instructions 
-using the ROCKET framework.
+A Claude Code skill for scoring and improving Microsoft Copilot Studio and Azure AI Foundry agent instructions using the **ROCKET framework**.
 
-## ROCKET Framework
+Agent instructions are the foundation of every successful Copilot Studio agent. Poor instructions lead to inconsistent behaviour, hallucinations, and agents that users don't trust. The ROCKET framework gives builders a structured, repeatable standard for writing instructions that are clear, complete, and production-ready.
+
+---
+
+## 🚀 ROCKET Framework
 
 | Letter | Dimension | Question |
 |--------|-----------|----------|
@@ -14,39 +17,96 @@ using the ROCKET framework.
 | E | Execute | What does it need to do? |
 | T | Tone | How should it sound? |
 
-Each dimension scores 1–3. Total: 18 points.
+Each dimension is scored 1–3. Maximum total: **18 points**.
 
-## Installation
+---
+
+## 📊 Scoring
+
+| Score | Label |
+|-------|-------|
+| 0–5 | 🚨 Houston, we have a problem |
+| 6–9 | 🔧 Rocket grounded — still in dev |
+| 10–14 | 🚀 On the launchpad — almost there |
+| 15–18 | ✅ Rocket has liftoff — production ready |
+
+---
+
+## ✅ Prerequisites
+
+Before installing, make sure you have the following:
+
+- [Git](https://git-scm.com/download/win) — for cloning the repo
+- [Node.js](https://nodejs.org) (LTS version) — required for Claude Code
+- [Claude Code](https://www.npmjs.com/package/@anthropic-ai/claude-code) — install with:
+```bash
+  npm install -g @anthropic-ai/claude-code
+```
+- A paid [Claude.ai](https://claude.ai) subscription (Pro, Team, or Enterprise)
+
+---
+
+## 📦 Installation
 
 ### Global install — works across all your projects
 ```bash
-mkdir -p ~/.claude/skills
-git clone https://github.com/YOUR-USERNAME/copilot-studio-rocket-skill.git ~/.claude/skills/copilot-studio-rocket
+git clone https://github.com/CraigWhite81/copilot-studio-rocket-skill.git ~/.agents/skills/copilot-studio-rocket
 ```
 
 ### Project-level install — just for one project
 ```bash
-git clone https://github.com/YOUR-USERNAME/copilot-studio-rocket-skill.git .claude/skills/copilot-studio-rocket
+git clone https://github.com/CraigWhite81/copilot-studio-rocket-skill.git .agents/skills/copilot-studio-rocket
 ```
 
-## Usage
+---
 
-Once installed, just talk to Claude naturally:
+## 💬 Usage
 
-- "Score my agent using the ROCKET framework" and paste your instructions
-- "ROCKET score this agent" with a .yaml file referenced
-- "Review these Copilot Studio instructions with ROCKET"
+Once installed, talk to Claude naturally:
 
-## Scoring
+| What you say | What happens |
+|---|---|
+| "Score my agent using the ROCKET framework" | Full scorecard with findings and suggestions |
+| "ROCKET score this agent" + .yaml file | Extracts and scores instructions from YAML |
+| "Framework details" | Full framework reference with good/bad examples |
+| "Help with Constraints" | Deep dive on that specific dimension |
+| "Review just the Tone section of my agent" | Focused single-dimension review |
 
-| Score | Label |
-|-------|-------|
-| 0–5 | Houston, we have a problem |
-| 6–9 | Rocket grounded — still in dev |
-| 10–14 | On the launchpad — almost there |
-| 15–18 | Rocket has liftoff — production ready |
+---
+
+## 📁 Repo Structure
+
+copilot-studio-rocket-skill/
+├── .agents/
+│   └── skills/
+│       └── copilot-studio-rocket/
+│           └── SKILL.md          # Core skill file
+├── scripts/
+│   └── rocket_scorer.py          # Python tool for YAML extraction
+├── resources/
+│   └── ROCKET_REFERENCE.md       # Full framework reference
+└── README.md
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! If you have suggestions for improving the ROCKET framework scoring criteria, additional examples, or fixes:
+
+1. Fork the repo
+2. Create a branch: `git checkout -b my-improvement`
+3. Make your changes and commit: `git commit -m "Describe your change"`
+4. Push and open a Pull Request
+
+---
+
+## 📄 License
+
+MIT License — free to use, modify, and share. See [LICENSE](LICENSE) for details.
+
+---
 
 ## Credits
 
-ROCKET framework created by Craig White. 
-Designed for Microsoft Copilot Studio agent governance.
+ROCKET framework created by **Craig White**.
+Designed for using with Agent Builder and Copilot Studio agents.
