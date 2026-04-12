@@ -72,22 +72,21 @@ Once installed, talk to Claude naturally:
 | "Help with Constraints" | Deep dive on that specific dimension |
 | "Review just the Tone section of my agent" | Focused single-dimension review |
 
----
-
 ## 📁 Repo Structure
 
+```
 copilot-studio-rocket-skill/
 ├── .agents/
 │   └── skills/
 │       └── copilot-studio-rocket/
-│           └── SKILL.md          # Core skill file
+│           └── SKILL.md                  # Core skill file
 ├── scripts/
-│   └── rocket_scorer.py          # Python tool for YAML extraction
+│   └── rocket_scorer.py                  # Python tool for YAML extraction
 ├── resources/
-│   └── ROCKET_REFERENCE.md       # Full framework reference
+│   └── ROCKET_REFERENCE.md               # Full framework reference
+├── LICENSE
 └── README.md
-
----
+```
 
 ## 🤝 Contributing
 
