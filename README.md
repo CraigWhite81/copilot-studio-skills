@@ -25,10 +25,10 @@ Each dimension is scored 1–3. Maximum total: **18 points**.
 
 | Score | Label |
 |-------|-------|
-| 0–5 | 🚨 Houston, we have a problem |
-| 6–9 | 🔧 Rocket grounded — still in dev |
-| 10–14 | 🚀 On the launchpad — almost there |
-| 15–18 | ✅ Rocket has liftoff — production ready |
+| 6-7 | 🚨 Houston, we have a problem |
+| 8-10 | 🔧 Rocket grounded — still in dev |
+| 11–14 | 🚀 On the launchpad — almost there |
+| 15–18 | ✅ WE HAVE LIFTOFF! — production ready |
 
 ---
 
@@ -42,7 +42,7 @@ Before installing, make sure you have the following:
 ```bash
   npm install -g @anthropic-ai/claude-code
 ```
-- A paid [Claude.ai](https://claude.ai) subscription (Pro, Team, or Enterprise)
+- A paid [Claude.ai](https://claude.ai) subscription (Pro, Team, or Enterprise) is required to use Skills in claude.ai directly
 
 ---
 
@@ -82,8 +82,6 @@ copilot-studio-rocket-skill/
 │           └── SKILL.md                  # Core skill file
 ├── scripts/
 │   └── rocket_scorer.py                  # Python tool for YAML extraction
-├── resources/
-│   └── ROCKET_REFERENCE.md               # Full framework reference
 ├── LICENSE
 └── README.md
 ```

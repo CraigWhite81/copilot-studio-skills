@@ -26,10 +26,10 @@ Each dimension is scored 1–3:
 - ✅ **3 — Complete**: Fully defined, specific, and actionable
 
 **Total: 6–18 points**
-- 0–5: 🚨 "Houston, we have a problem" — do not deploy
-- 6–9: 🔧 Rocket grounded — still in development
-- 10–14: 🚀 On the launchpad — almost there
-- 15–18: ✅ Rocket has liftoff — production ready
+- 6–7: 🚨 "Houston, we have a problem" — do not deploy
+- 8–10: 🔧 Rocket grounded — still in development
+- 11–14: 🚀 On the launchpad — almost there
+- 15–18: ✅ WE HAVE LIFTOFF! — production ready
 
 ## How to Respond to Different Requests
 
@@ -37,10 +37,10 @@ Each dimension is scored 1–3:
 Follow the full scoring workflow below and output the complete scorecard.
 
 ### When asked for "framework details" or "show me the framework"
-Output the full framework reference including good and bad examples for all 6 dimensions, using the detail in the Framework Reference section below.
+Output the full framework reference including good and bad examples for all 6 dimensions from the Framework Reference section below. Do NOT read from any external files — all content is in this skill file.
 
 ### When asked for help with a specific dimension (e.g. "help with Constraints", "explain Objectives")
-Output only that dimension's full detail — definition, good signals, anti-patterns, and an example — then offer to review their instructions for that dimension specifically.
+Output only that dimension's full detail — definition, good signals, anti-patterns, and example — then offer to review their instructions for that dimension specifically.
 
 ### When asked to review a specific dimension only
 Score and provide suggestions for that dimension only.
@@ -106,6 +106,12 @@ Always output in this format:
 | T — Tone | X/3 | [🚨 Lacking / ⚠️ Partial / ✅ Complete] |
 | **Total** | **X/18** | **[Status label with emoji]** |
 
+**Score interpretation:**
+- 6–7: 🚨 Houston, we have a problem — do not deploy
+- 8–10: 🔧 Rocket grounded — still in development
+- 11–14: 🚀 On the launchpad — almost there
+- 15–18: ✅ WE HAVE LIFTOFF! — production ready
+
 ---
 
 ### R — Role [X/3] [emoji]
@@ -146,7 +152,7 @@ Always output in this format:
 
 ## Framework Reference
 
-Use this section when a user asks for framework details or help with a specific dimension.
+Use this section when a user asks for framework details or help with a specific dimension. All content is inline — do not read from external files.
 
 ### R — Role
 **What it covers:** The agent's named identity, persona, and what it represents.
@@ -256,4 +262,4 @@ Use this section when a user asks for framework details or help with a specific 
 - "ROCKET score this agent" — attach or reference a .yaml file
 - "Framework details" — get the full framework with examples
 - "Help with Constraints" — get detailed guidance on that dimension
-- "Review just the Tone section of my agent"
+- "Review just the Tone section of my agent" — focused single-dimension review
