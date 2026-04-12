@@ -1,6 +1,6 @@
-# 🚀 Copilot Studio ROCKET Skill
+# 🚀 Copilot Studio Skills
 
-A Claude Code skill for scoring and improving your agent instructions for Agent Builder, Copilot Studio and Azure AI Foundry agents using the **ROCKET framework**.
+A growing library of SKILL.md files for use with Claude in Microsoft Copilot Studio projects. Currently includes the **ROCKET framework scorer**, with more skills to follow.
 
 Agent instructions are the foundation of every successful agent. Poor instructions lead to inconsistent behaviour, hallucinations, and agents that users don't trust. The ROCKET framework gives builders a structured, repeatable standard for writing instructions that are clear, complete, and production-ready.
 
@@ -32,6 +32,14 @@ Each dimension is scored 1–3. Maximum total: **18 points**.
 
 ---
 
+## 🖼️ Example Output
+
+The scorecard below shows the ROCKET framework in action against a minimal set of agent instructions — demonstrating how each dimension is assessed and where gaps are surfaced.
+
+![ROCKET framework example output](assets/rocket-example-output-claudeai.png)
+
+---
+
 ## ✅ Prerequisites
 
 Before installing, make sure you have the following:
@@ -50,12 +58,12 @@ Before installing, make sure you have the following:
 
 ### Global install — works across all your projects
 ```bash
-git clone https://github.com/CraigWhite81/copilot-studio-rocket-skill.git ~/.agents/skills/copilot-studio-rocket
+git clone https://github.com/CraigWhite81/copilot-studio-skills.git ~/.agents/skills/rocket
 ```
 
 ### Project-level install — just for one project
 ```bash
-git clone https://github.com/CraigWhite81/copilot-studio-rocket-skill.git .agents/skills/copilot-studio-rocket
+git clone https://github.com/CraigWhite81/copilot-studio-skills.git .agents/skills/rocket
 ```
 
 ---
@@ -72,19 +80,25 @@ Once installed, talk to Claude naturally:
 | "Help with Constraints" | Deep dive on that specific dimension |
 | "Review just the Tone section of my agent" | Focused single-dimension review |
 
+---
+
 ## 📁 Repo Structure
 
 ```
-copilot-studio-rocket-skill/
+copilot-studio-skills/
 ├── .agents/
 │   └── skills/
-│       └── copilot-studio-rocket/
+│       └── rocket/
 │           └── SKILL.md                  # Core skill file
 ├── scripts/
 │   └── rocket_scorer.py                  # Python tool for YAML extraction
+├── assets/
+│   └── rocket-example-output-claudeai.png  # Example scorecard output
 ├── LICENSE
 └── README.md
 ```
+
+---
 
 ## 🤝 Contributing
 
@@ -106,4 +120,4 @@ MIT License — free to use, modify, and share. See [LICENSE](LICENSE) for detai
 ## Credits
 
 ROCKET framework created by **Craig White**.
-Designed for using with Agent Builder and Copilot Studio agents.
+Designed for use with Agent Builder, Copilot Studio, and Microsoft Foundry agents.
