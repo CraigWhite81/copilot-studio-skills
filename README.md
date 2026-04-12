@@ -1,6 +1,6 @@
 # 🚀 Copilot Studio ROCKET Skill
 
-A Claude Code skill for scoring and improving Microsoft Copilot Studio and Azure AI Foundry agent instructions using the **ROCKET framework**.
+A Claude Code skill for scoring and improving your agent instructions for Agent Builder, Copilot Studio and Azure AI Foundry agents using the **ROCKET framework**.
 
 Agent instructions are the foundation of every successful Copilot Studio agent. Poor instructions lead to inconsistent behaviour, hallucinations, and agents that users don't trust. The ROCKET framework gives builders a structured, repeatable standard for writing instructions that are clear, complete, and production-ready.
 
