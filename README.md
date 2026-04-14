@@ -32,11 +32,31 @@ Each dimension is scored 1–3. Maximum total: **18 points**.
 
 ---
 
-## 🖼️ Example Output
+## 🖼️ Example Outputs
 
-The scorecard below shows the ROCKET framework in action against a minimal set of agent instructions — demonstrating how each dimension is assessed and where gaps are surfaced.
+### 1. Get framework info.
+
+Return the complete ROCKET framework reference, including dimension definitions, good signals, anti-patterns, and examples.
+
+![ROCKET framework reference output](assets/rocket-example-get-framework.png)
+
+### 2. Example scoring output
+
+Example assessment of agent instructions and how they're surfaced.
 
 ![ROCKET framework example output](assets/rocket-example-output-claudeai.png)
+
+### 3. Example of recommendations
+
+ROCKET scoring also comes with recommendations you can apply to your instructions.
+
+![ROCKET framework full output example](assets/rocket-example-full-output.png)
+
+### 4. Get advice
+
+For focused guidance on a single dimension, such as Constraints, Execute, or Tone. You can also ask for all at once.
+
+![ROCKET framework dimension advice example](assets/rocket-example-dimension-advice.png)
 
 ---
 
@@ -77,6 +97,7 @@ Once installed, talk to Claude naturally:
 | "Score my agent using the ROCKET framework" | Full scorecard with findings and suggestions |
 | "ROCKET score this agent" + .yaml file | Extracts and scores instructions from YAML |
 | "Framework details" | Full framework reference with good/bad examples |
+| "Give me a ROCKET template for agent instructions" | Paste-ready template with [placeholders] to customise |
 | "Help with Constraints" | Deep dive on that specific dimension |
 | "Review just the Tone section of my agent" | Focused single-dimension review |
 
@@ -93,7 +114,10 @@ copilot-studio-skills/
 ├── scripts/
 │   └── rocket_scorer.py                  # Python tool for YAML extraction
 ├── assets/
-│   └── rocket-example-output-claudeai.png  # Example scorecard output
+│   ├── rocket-example-get-framework.png
+│   ├── rocket-example-output-claudeai.png
+│   ├── rocket-example-full-output.png
+│   └── rocket-example-dimension-advice.png
 ├── LICENSE
 └── README.md
 ```

@@ -1,6 +1,6 @@
 ---
 name: copilot-studio-rocket
-description: Analyse Microsoft Copilot Studio agent YAML files and score agent instructions using the ROCKET framework (Role, Objectives, Constraints, Knowledge, Execute, Tone). Use when reviewing, auditing, or improving Copilot Studio agent instructions. Triggers on phrases like "score my agent", "review these instructions", "ROCKET framework", "framework details", "help with Role", "help with Constraints", or when a .yaml file containing Copilot Studio agent configuration is provided.
+description: Analyse Microsoft Copilot Studio agent YAML files and score agent instructions using the ROCKET framework (Role, Objectives, Constraints, Knowledge, Execute, Tone). Use when reviewing, auditing, improving, or templating Copilot Studio agent instructions. Triggers on phrases like "score my agent", "review these instructions", "ROCKET framework", "framework details", "framework template", "template for agent instructions", "help with Role", "help with Constraints", or when a .yaml file containing Copilot Studio agent configuration is provided.
 ---
 
 # Copilot Studio ROCKET Framework Analyser
@@ -38,6 +38,9 @@ Follow the full scoring workflow below and output the complete scorecard.
 
 ### When asked for "framework details" or "show me the framework"
 Output the full framework reference including good and bad examples for all 6 dimensions from the Framework Reference section below. Do NOT read from any external files — all content is in this skill file.
+
+### When asked for a "framework template" or "template for agent instructions"
+Output the full ROCKET Instructions Template from the Framework Template section below. Keep square-bracket placeholders exactly as written so users can replace them.
 
 ### When asked for help with a specific dimension (e.g. "help with Constraints", "explain Objectives")
 Output only that dimension's full detail — definition, good signals, anti-patterns, and example — then offer to review their instructions for that dimension specifically.
@@ -256,10 +259,59 @@ Use this section when a user asks for framework details or help with a specific 
 
 ---
 
+## Framework Template
+
+Use this section when a user asks for a template they can paste into their agent instructions and customise.
+
+This template is designed to score at least 15/18 when completed with specific, concrete values.
+
+### ROCKET Instructions Template (Replace all [square-bracket] values)
+
+You are [Agent Name], the [Agent Role Title] for [Organisation/Team].
+You represent [Department/Function] and your primary purpose is to [Primary Outcome].
+
+## Objectives
+1. Help [Primary Audience] achieve [Outcome 1] with [Success Measure 1].
+2. Reduce [Pain Point/Metric] by [Target Improvement or Timeframe].
+3. Ensure users can [Outcome 2] without needing [Escalation Type], where possible.
+
+## Constraints
+- Never provide advice on [Prohibited Topic 1] or [Prohibited Topic 2].
+- Never fabricate policy, pricing, legal, medical, or technical facts.
+- If the request is outside scope ([Out of Scope Boundary]), clearly say this and hand off to [Handoff Team/Channel].
+- If confidence is low or information is missing, ask clarifying questions before answering.
+
+## Knowledge
+- Primary knowledge sources:
+	- [Knowledge Source 1] (purpose: [Purpose 1], refresh: [Cadence 1])
+	- [Knowledge Source 2] (purpose: [Purpose 2], refresh: [Cadence 2])
+- Always prioritise these sources over general model knowledge.
+- If information is unavailable in trusted sources, say "I do not have enough verified information" and offer [Fallback Action].
+
+## Execute
+- When user asks about [Trigger A], do:
+	1. Check [System/Source A]
+	2. Confirm [Required Inputs A]
+	3. Return [Expected Output A]
+- When user asks about [Trigger B], do:
+	1. Use [Tool/Action B]
+	2. Validate [Validation Rule B]
+	3. If failure, perform [Failure Handling B]
+- Before final response, verify answer matches known policies from [Policy Source].
+
+## Tone
+- Use [Language Variant, e.g. UK English].
+- Keep responses [Concise/Structured/Step-by-step] and avoid jargon unless user asks for detail.
+- If the user seems frustrated, acknowledge the issue first, then provide calm and practical next steps.
+- Maintain a [Brand Voice Adjective 1], [Brand Voice Adjective 2], and [Brand Voice Adjective 3] tone.
+
+---
+
 ## Usage Examples
 
 - "Score my agent using the ROCKET framework" — paste or reference your instructions
 - "ROCKET score this agent" — attach or reference a .yaml file
 - "Framework details" — get the full framework with examples
+- "Give me a ROCKET template for agent instructions" — get a ready-to-fill template with placeholders
 - "Help with Constraints" — get detailed guidance on that dimension
 - "Review just the Tone section of my agent" — focused single-dimension review
