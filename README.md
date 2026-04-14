@@ -58,6 +58,12 @@ For focused guidance on a single dimension, such as Constraints, Execute, or Ton
 
 ![ROCKET framework dimension advice example](assets/rocket-example-dimension-advice.png)
 
+### 5. Get the framework template
+
+Get access to a template framework you can copy straight into your agent instructions. Simply update the parts in square brackets to get going.
+
+![ROCKET framework template example](assets/rocket-framework-template.png)
+
 ---
 
 ## ✅ Prerequisites
